@@ -1,0 +1,38 @@
+# Pipeline template that defines common runtime environment variables.
+variables:
+  # Source Config
+  # The directory containing the scripts for training, evaluating, and registering the model
+  - name: SOURCES_DIR_TRAIN
+    value: ml_model
+    # The path to the model training script under SOURCES_DIR_TRAIN
+  - name: TRAIN_SCRIPT_PATH
+    value: training/train_aml.py
+    
+
+  # Azure ML Variables
+  - name: EXPERIMENT_NAME
+    value: mlopspython_empty
+  
+  - name: TRAINING_PIPELINE_NAME
+    value: "Training-Pipeline"
+  - name: MODEL_NAME
+    value: diabetes_regression_model.pkl
+
+  # AML Compute Cluster Config
+  - name: AML_ENV_NAME
+    value: training_env
+  - name: AML_ENV_TRAIN_CONDA_DEP_FILE
+    value: "conda_dependencies.yml"
+  - name: AML_COMPUTE_CLUSTER_CPU_SKU
+    value: STANDARD_DS2_V2
+  - name: AML_COMPUTE_CLUSTER_NAME
+    value: train-cluster
+  - name: AML_CLUSTER_MIN_NODES
+    value: 0
+  - name: AML_CLUSTER_MAX_NODES
+    value: 4
+  - name: AML_CLUSTER_PRIORITY
+    value: lowpriority
+
+  
+    
