@@ -38,7 +38,7 @@ def main():
     run.input_datasets['training_data'] = 'empty dataset'
     run.parent.tag("dataset_id", value='dataset.id')
 
-    
+    print(f"testing")
     run.tag("run_type", value="train")
     print(f"tags now present for run: {run.tags}")
 
