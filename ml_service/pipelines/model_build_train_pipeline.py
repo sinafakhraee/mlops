@@ -11,6 +11,7 @@ from azureml.core import Experiment
 from ml_service.pipelines.load_sample_data import create_sample_data_csv
 
 def main():
+    # test
     e = Env()
     # Get Azure machine learning workspace
     aml_workspace = Workspace.get(
