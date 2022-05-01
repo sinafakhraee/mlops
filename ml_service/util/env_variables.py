@@ -38,7 +38,9 @@ class Env:
     experiment_name: Optional[str] = os.environ.get("EXPERIMENT_NAME")
     model_version: Optional[str] = os.environ.get("MODEL_VERSION")
     image_name: Optional[str] = os.environ.get("IMAGE_NAME")
-    
+    datastore_name: Optional[str] = os.environ.get("DATASTORE_NAME")
+    dataset_name: Optional[str] = os.environ.get("DATASET_NAME")
+    dataset_version: Optional[str] = os.environ.get("DATASET_VERSION")
     build_uri: Optional[str] = os.environ.get("BUILD_URI")
     
     allow_run_cancel: Optional[str] = os.environ.get(
