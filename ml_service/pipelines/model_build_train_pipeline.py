@@ -89,13 +89,13 @@ def main():
         dataset = Dataset.Tabular.from_delimited_files(
             path=(datatstore, path_on_datastore)
         )
-        dataset = dataset.register(
-            workspace=aml_workspace,
-            name=dataset_name,
-            description="diabetes training data",
-            tags={"format": "CSV"},
-            create_new_version=True,
-        )
+        # dataset = dataset.register(
+        #     workspace=aml_workspace,
+        #     name=dataset_name,
+        #     description="diabetes training data",
+        #     tags={"format": "CSV"},
+        #     create_new_version=True,
+        # )
 
 
 
