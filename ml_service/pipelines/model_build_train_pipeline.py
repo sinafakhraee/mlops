@@ -47,9 +47,9 @@ def main():
     ] = datastore_name  # NOQA: E501
     
     model_name_param = PipelineParameter(name="model_name", default_value=e.model_name)  # NOQA: E501
-    # dataset_version_param = PipelineParameter(
-    #     name="dataset_version", default_value=e.dataset_version
-    # )
+    dataset_version_param = PipelineParameter(
+        name="dataset_version", default_value=e.dataset_version
+    )
     data_file_path_param = PipelineParameter(
         name="data_file_path", default_value="none"
     )
