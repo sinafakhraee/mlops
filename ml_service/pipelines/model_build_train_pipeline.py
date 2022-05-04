@@ -27,7 +27,7 @@ def main():
     if aml_compute is not None:
         print("aml_compute:")
         print(aml_compute)
-
+    test = 1
     # Create a reusable Azure ML environment
     environment = get_environment(
         aml_workspace,
